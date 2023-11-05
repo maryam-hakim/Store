@@ -9,3 +9,26 @@
     margin: 150px 100px;
     
 }
+
+@media (max-width: 1200px){
+    .store_container{
+        padding: 15px 80px;
+        margin-top: 110px;
+    }
+
+}
+
+@media (max-width: 768px){
+    .store_container{
+        padding: 15px 40px;
+    }
+
+}
+
+@media (max-width: 555px){
+    .store_container{
+        justify-content: center;
+        padding: 15px 10px;
+    }
+
+}
