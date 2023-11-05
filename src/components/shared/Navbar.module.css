@@ -42,3 +42,25 @@
     top: -5px;
     right: 110px;
 }
+
+@media (max-width: 1200px){
+    .navbar_container{
+        padding: 15px 80px;
+    }
+
+}
+
+@media (max-width: 768px){
+    .navbar_container{
+        padding: 15px 40px;
+    }
+
+}
+
+@media (max-width: 555px){
+    .navbar_container{
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+}
