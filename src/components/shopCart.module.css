@@ -57,3 +57,30 @@
     color: blue;
 }
 
+@media (max-width: 1050px) {
+    .shopcart_container{
+        flex-direction: column-reverse;
+        margin: 120px 80px 50px;
+        align-items: center;
+    }
+
+    .checkOut{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .shopcart_container{
+        margin: 120px 40px 50px;
+    }
+    
+}
+
+@media (max-width: 555px) {
+    .shopcart_container{
+        margin: 120px 20px 50px;
+    }
+    
+}
+
