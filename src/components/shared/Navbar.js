@@ -1,15 +1,15 @@
 import React , { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Navbar.module.css'
+import styles from './Navbar.module.css';
+import { useSelector } from "react-redux";
 
-//context
-import {cartContext} from '../../context/CartContextProvider';
+
 
 import shopIcon from '../../assets-icons/shop.svg';
 
 const Navbar = () => {
     
-    const {state} = useContext(cartContext);
+    const state = useSelector(state => state.cartState);
 
     return (
         <div>

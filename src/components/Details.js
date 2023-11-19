@@ -1,24 +1,18 @@
-import {React , useContext , useEffect , useState} from 'react';
+import {React , useEffect , useState} from 'react';
 import axios from 'axios';
-import {ProductContext} from '../context/ProductContextProvider';
 import { Link , useParams} from 'react-router-dom';
-import styles from './Details.module.css'
+import styles from './Details.module.css';
+import { useSelector } from "react-redux";
 
-const Details = (props) => {
-    const [product , setProduct] = useState({})
+const Details = () => {
+    
     const params = useParams();
     const id = params.id;
     //const id = props.match.param.id
     
-    useEffect(()=>{
-       const fetch = async() =>{
-        const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
-        setProduct(response.data);
-       }
-       fetch();
-    },[]
-
-    )
+    const data = useSelector(state => state.productState.products);
+    const product = data[id - 1];
+    
 
     return (
         <div className={styles.details_component}>
